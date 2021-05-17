@@ -268,7 +268,7 @@ function tryFsResolve(
 
   let postfixIndex = fsPath.indexOf('?')
   if (postfixIndex < 0) {
-    postfixIndex = fsPath.indexOf('#')
+    postfixIndex = fsPath.indexOf('#', fsPath.lastIndexOf('/'))
   }
   if (postfixIndex > 0) {
     file = fsPath.slice(0, postfixIndex)
